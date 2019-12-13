@@ -2,8 +2,8 @@ var passport = require('passport');
 var FacebookStrategy = require('passport-facebook').Strategy;
 
 // facebook login 
-var CLIIENT_APP_ID='453877871871560',
-CLIENT_APP_SECRET='53d6ced043e87bb07f5effb40209e8a8';
+var CLIIENT_APP_ID='2487125261608686',
+CLIENT_APP_SECRET='29404fd59314c9162f7492ef6608623a';
 var fboptns={
    clientID: CLIIENT_APP_ID,
    clientSecret:CLIENT_APP_SECRET ,

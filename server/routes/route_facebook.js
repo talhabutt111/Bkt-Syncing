@@ -5,6 +5,7 @@ var passport = require('passport');
 module.exports = function (server) {
 
 server.get('/facebook', passport.authenticate('facebook',{
+    
     scope:['profile']
 }))
 

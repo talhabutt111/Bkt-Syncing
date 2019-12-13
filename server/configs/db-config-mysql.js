@@ -3,11 +3,11 @@ const Sequelize = require('sequelize');
 
 // var dbName = 'sales&stock';
 var dbName = 'bucket_erp';
-var user = 'asas';
-// var user = 'root';
+// var user = 'asas';
+var user = 'root';
 
-// var password = '';
-var password = 'asas1234';
+var password = '';
+// var password = 'asas1234';
 var config = {
     host: 'localhost',
     dialect: 'mysql',
