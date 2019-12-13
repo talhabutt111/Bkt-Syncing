@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "asas",
+    "password": "asas1234",
+    "database": "sales&stock",
+    "host": "localhost",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "asas",
+    "password": "asas1234",
+    "database": "sales&stock",
+    "host": "localhost",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "asas",
+    "password": "asas1234",
+    "database": "sales&stock",
+    "host": "localhost",
+    "dialect": "mysql"
+  }
+}
