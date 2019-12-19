@@ -42,7 +42,8 @@ module.exports = (server) => {
     // wp.validateToken().create()
     //     .then(res => console.log(res))
     //     .catch(err => console.error(err))
-    server.get('/allbkt', (req, res) => {
+
+    server.get('/allbktwp', (req, res) => {
         console.log('mybkt');
         wp.users().create({ username: 'tesTing', password: 'test', email: 'test@test.com' })
             .then(res => console.log(res))
@@ -51,4 +52,6 @@ module.exports = (server) => {
             .then(res => console.log(res))
             .catch(err => console.log(err))
     })
+
+
 }

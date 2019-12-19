@@ -5,9 +5,9 @@ var path = require('path');
 var passportsetup=require('./server/configs/google_auth');
 var passportsetupFacebook=require('./server/configs/facebook_auth');
 
-process.env.NODE_ENV = 'production';
+// process.env.NODE_ENV = 'production';
 
-const allowUrl = ['/isAuth', '/auth', '/login','/callback','/facebook','/auth/google','/auth/google/callback','/posts','/users','/pages','/createposts','/comments','/categories','/google'];
+const allowUrl = ['/isAuth', '/auth', '/login','/callback','/facebook','/auth/google','/auth/google/callback','/posts','/users','/pages','/createposts','/comments','/categories','/google','allbkt'];
 // const allowUrl = ['/isAuth', '/auth', '/login','/home','/auth/facebook','/allbkt','/auth/facebook/callback','/auth/google','/auth/google/callback'];
 
 
@@ -18,7 +18,7 @@ const authenticationMiddleware = (whiteList = []) => (req, res, next) => {
     if (req.isAuthenticated()) {
         return next()
     }
-    res.json({ message: 'You are not authorized to view this page.' })
+    res.json({ message: 'You are not authorized to view this page or data.' })
 }
 
 

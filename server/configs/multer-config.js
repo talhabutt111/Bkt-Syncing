@@ -29,6 +29,7 @@ function checkFileTypeForImages(file, cb) {
     if (mimetype && extname) {
         return cb(null, true);
     } else {
+        
         cb('Error: PNG or JPG Images Only!');
     }
 }
