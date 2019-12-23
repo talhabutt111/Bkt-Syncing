@@ -5,8 +5,8 @@ module.exports = (server) => {
 
     let wp = new WPAPI({
         endpoint: 'https://bktstaging.devzonesolutions.com/wp-json',
-        // username: 'muzzammal.idrees',
-        // password: 'Dtp@lCJeCguyvEIbW0BMP7Oh'
+        username: 'muzzammal.idrees',
+        password: 'Dtp@lCJeCguyvEIbW0BMP7Oh'
     });
 
     // var token;
@@ -32,7 +32,7 @@ module.exports = (server) => {
     //         console.log(res)
     //         token = res.token
     // console.log(token);
-    wp.setHeaders({ Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' })
+   const header= wp.setHeaders({ Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' })
     //     wp.validateToken().create()
     //         .then(res => console.log(res))
     //         .catch(err => console.error(err))
@@ -45,11 +45,14 @@ module.exports = (server) => {
 
     server.get('/allbktwp', (req, res) => {
         console.log('mybkt');
-        wp.users().create({ username: 'tesTing', password: 'test', email: 'test@test.com' })
-            .then(res => console.log(res))
-            .catch(err => console.log(err))
+        // wp.users().create({ username: 'tesTing', password: 'test', email: 'test@test.com' })
+        //     .then(res => console.log(res))
+        //     .catch(err => console.log(err))
         wp.users().get()
-            .then(res => console.log(res))
+            .then(users => {
+                console.log(users);
+
+            })
             .catch(err => console.log(err))
     })
 

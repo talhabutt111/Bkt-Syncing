@@ -32,7 +32,7 @@ server.use(authenticationMiddleware(allowUrl));
 require('./server/configs/db-config-mysql');
 require('./server/routes/route-login')(server);
 require('./server/routes/route-brands')(server);
-// require('./server/routes/route-bktsync')(server);
+require('./server/routes/route-bktsync')(server);
 require('./server/routes/route-bktWPsync')(server);
 require('./server/routes/route-companies')(server);
 require('./server/routes/route_google_auth')(server);
